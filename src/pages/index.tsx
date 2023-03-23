@@ -76,7 +76,7 @@ export default function Home({ theme, dictapi_data }: HomeProps) {
                           )}
                           {definition?.example && (
                             <label className="font-extralight italic">
-                              "{definition.example}"
+                              &quot;{definition.example}&quot;
                             </label>
                           )}
                         </div>
