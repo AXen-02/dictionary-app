@@ -28,7 +28,7 @@ export default function Home({ theme, dictapi_data }: HomeProps) {
     <>
       {dictData.map(({ word, phonetic, phonetics, meanings }) => {
         return (
-          <>
+          <div key={word + (Math.floor(Math.random() * 999999) + 1)}>
             <div className="grid grid-flow-col gap-28 w-full">
               <div className="grid items-end">
                 <label className="text-8xl font-bold">{word}</label>
@@ -54,13 +54,19 @@ export default function Home({ theme, dictapi_data }: HomeProps) {
               {/* <pre id="json">{JSON.stringify(meanings, undefined, 2)}</pre>               */}
               {meanings.map((meaning) => {
                 return (
-                  <div>
+                  <div key={meaning + (Math.floor(Math.random() * 999999) + 1)}>
                     <label className="text-2xl font-bold">
                       {meaning.partOfSpeech}
                     </label>
                     {meaning.definitions.map((definition) => {
                       return (
-                        <div className="grid grid-flow-row pl-6">
+                        <div
+                          key={
+                            definition +
+                            (Math.floor(Math.random() * 999999) + 1)
+                          }
+                          className="grid grid-flow-row pl-6"
+                        >
                           <label>* {definition.definition}</label>
                           {definition?.synonyms || (
                             <label>Synonyms: {definition.synonyms}</label>
@@ -81,7 +87,12 @@ export default function Home({ theme, dictapi_data }: HomeProps) {
                         <label className="text-primary">Synonyms: </label>
                       )}
                       {meaning.synonyms.map((synonym) => (
-                        <label className="text-primary-focus font-bold">
+                        <label
+                          key={
+                            synonym + (Math.floor(Math.random() * 999999) + 1)
+                          }
+                          className="text-primary-focus font-bold"
+                        >
                           {synonym}
                         </label>
                       ))}
@@ -90,16 +101,16 @@ export default function Home({ theme, dictapi_data }: HomeProps) {
                 );
               })}
             </div>
-          </>
+          </div>
         );
       })}
 
       {/* api json */}
-      {/* <div className="mockup-code">
+      <div className="mockup-code">
         <code>
           <pre>{JSON.stringify(dictData, undefined, 2)}</pre>
         </code>
-      </div> */}
+      </div>
     </>
   );
 
