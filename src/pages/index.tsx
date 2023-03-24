@@ -48,6 +48,7 @@ export default function Home({ theme, dictapi_data }: HomeProps) {
                   className="btn btn-ghost btn-circle btn-outline w-20 h-20 p-4 cursor-pointer"
                   onClick={() => setAudioPlaying(true)}
                 />
+
                 <ReactPlayer
                   url={phonetics[0].audio}
                   playing={audioPlaying}
