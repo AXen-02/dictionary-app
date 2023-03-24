@@ -18,8 +18,26 @@ interface HomeProps {
 interface DictProps {
   word: string;
   phonetic: string;
-  phonetics: [];
-  meanings: [];
+  phonetics: [
+    {
+      audio: string;
+    }
+  ];
+  meanings: [
+    {
+      partOfSpeech: string;
+      definitions: [
+        {
+          definition: string;
+          synonyms: [];
+          antonyms: [];
+          example: string;
+        }
+      ];
+      synonyms: [];
+      antonyms: [];
+    }
+  ];
 }
 
 export default function Home({ theme, dictapi_data }: HomeProps) {
@@ -62,17 +80,14 @@ export default function Home({ theme, dictapi_data }: HomeProps) {
               {/* <pre id="json">{JSON.stringify(meanings, undefined, 2)}</pre>               */}
               {meanings.map((meaning) => {
                 return (
-                  <div key={meaning + (Math.floor(Math.random() * 999999) + 1)}>
+                  <div key={Math.floor(Math.random() * 999999) + 1}>
                     <label className="text-2xl font-bold">
                       {meaning.partOfSpeech}
                     </label>
                     {meaning.definitions.map((definition) => {
                       return (
                         <div
-                          key={
-                            definition +
-                            (Math.floor(Math.random() * 999999) + 1)
-                          }
+                          key={Math.floor(Math.random() * 999999) + 1}
                           className="grid grid-flow-row pl-6"
                         >
                           <label>* {definition.definition}</label>
@@ -166,7 +181,7 @@ const searchDictApi = async (searchTerm: string) => {
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const theme = "night";
-  const dictapi_data = [];
+  const dictapi_data: [] = [];
 
   return {
     props: {
