@@ -15,6 +15,13 @@ interface HomeProps {
   dictapi_data: [];
 }
 
+interface DictProps {
+  word: string;
+  phonetic: string;
+  phonetics: [];
+  meanings: [];
+}
+
 export default function Home({ theme, dictapi_data }: HomeProps) {
   const [searchTerm, setSearchTerm] = useState("rap");
   const [dictData, setDictData] = useState(dictapi_data);
@@ -26,7 +33,7 @@ export default function Home({ theme, dictapi_data }: HomeProps) {
 
   const renderDictionaryData = (
     <>
-      {dictData.map(({ word, phonetic, phonetics, meanings }) => {
+      {dictData.map(({ word, phonetic, phonetics, meanings }: DictProps) => {
         return (
           <div key={word + (Math.floor(Math.random() * 999999) + 1)}>
             <div className="grid grid-flow-col gap-28 w-full">
