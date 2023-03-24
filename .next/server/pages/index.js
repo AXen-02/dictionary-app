@@ -1,82 +1,267 @@
 "use strict";
-/*
- * ATTENTION: An "eval-source-map" devtool has been used.
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 (() => {
 var exports = {};
-exports.id = "pages/index";
-exports.ids = ["pages/index"];
+exports.id = 405;
+exports.ids = [405];
 exports.modules = {
 
-/***/ "./src/pages/index.tsx":
-/*!*****************************!*\
-  !*** ./src/pages/index.tsx ***!
-  \*****************************/
+/***/ 85:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Home),\n/* harmony export */   \"getStaticProps\": () => (/* binding */ getStaticProps)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ \"next/head\");\n/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ \"axios\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var react_icons_hi2__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-icons/hi2 */ \"react-icons/hi2\");\n/* harmony import */ var react_icons_hi2__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_icons_hi2__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var react_player__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-player */ \"react-player\");\n/* harmony import */ var react_player__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_player__WEBPACK_IMPORTED_MODULE_5__);\nvar __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([axios__WEBPACK_IMPORTED_MODULE_2__]);\naxios__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];\n\n\n\n\n\n\n\nfunction Home({ theme , dictapi_data  }) {\n    const [searchTerm, setSearchTerm] = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)(\"rap\");\n    const [dictData, setDictData] = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)(dictapi_data);\n    const [audioPlaying, setAudioPlaying] = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)(false);\n    const handleChange = (event)=>{\n        setSearchTerm(event.target.value);\n    };\n    const renderDictionaryData = /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {\n        children: [\n            dictData.map(({ word , phonetic , phonetics , meanings  })=>{\n                return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                            className: \"grid grid-flow-col gap-28 w-full\",\n                            children: [\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    className: \"grid items-end\",\n                                    children: [\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"label\", {\n                                            className: \"text-8xl font-bold\",\n                                            children: word\n                                        }, void 0, false, {\n                                            fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                            lineNumber: 34,\n                                            columnNumber: 17\n                                        }, this),\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"label\", {\n                                            className: \"text-xl font-semibold text-secondary\",\n                                            children: phonetic\n                                        }, void 0, false, {\n                                            fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                            lineNumber: 35,\n                                            columnNumber: 17\n                                        }, this)\n                                    ]\n                                }, void 0, true, {\n                                    fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                    lineNumber: 33,\n                                    columnNumber: 15\n                                }, this),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    className: \"justify-end items-center text-success flex-none flex\",\n                                    children: [\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_icons_hi2__WEBPACK_IMPORTED_MODULE_4__.HiOutlinePlay, {\n                                            className: \"btn btn-ghost btn-circle btn-outline w-20 h-20 p-4 cursor-pointer\",\n                                            onClick: ()=>setAudioPlaying(true)\n                                        }, void 0, false, {\n                                            fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                            lineNumber: 40,\n                                            columnNumber: 17\n                                        }, this),\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((react_player__WEBPACK_IMPORTED_MODULE_5___default()), {\n                                            url: phonetics[0].audio,\n                                            playing: audioPlaying,\n                                            height: 0,\n                                            width: 0,\n                                            onEnded: ()=>setAudioPlaying(false)\n                                        }, void 0, false, {\n                                            fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                            lineNumber: 44,\n                                            columnNumber: 17\n                                        }, this)\n                                    ]\n                                }, void 0, true, {\n                                    fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                    lineNumber: 39,\n                                    columnNumber: 15\n                                }, this)\n                            ]\n                        }, void 0, true, {\n                            fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                            lineNumber: 32,\n                            columnNumber: 13\n                        }, this),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                            children: meanings.map((meaning)=>{\n                                return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    children: [\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"label\", {\n                                            className: \"text-2xl font-bold\",\n                                            children: meaning.partOfSpeech\n                                        }, void 0, false, {\n                                            fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                            lineNumber: 58,\n                                            columnNumber: 21\n                                        }, this),\n                                        meaning.definitions.map((definition)=>{\n                                            return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                                className: \"grid grid-flow-row pl-6\",\n                                                children: [\n                                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"label\", {\n                                                        children: [\n                                                            \"* \",\n                                                            definition.definition\n                                                        ]\n                                                    }, void 0, true, {\n                                                        fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                                        lineNumber: 70,\n                                                        columnNumber: 27\n                                                    }, this),\n                                                    definition?.synonyms || /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"label\", {\n                                                        children: [\n                                                            \"Synonyms: \",\n                                                            definition.synonyms\n                                                        ]\n                                                    }, void 0, true, {\n                                                        fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                                        lineNumber: 72,\n                                                        columnNumber: 29\n                                                    }, this),\n                                                    definition?.antonyms || /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"label\", {\n                                                        children: [\n                                                            \"Antonyms: \",\n                                                            definition.antonyms\n                                                        ]\n                                                    }, void 0, true, {\n                                                        fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                                        lineNumber: 75,\n                                                        columnNumber: 29\n                                                    }, this),\n                                                    definition?.example && /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"label\", {\n                                                        className: \"font-extralight italic\",\n                                                        children: [\n                                                            '\"',\n                                                            definition.example,\n                                                            '\"'\n                                                        ]\n                                                    }, void 0, true, {\n                                                        fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                                        lineNumber: 78,\n                                                        columnNumber: 29\n                                                    }, this)\n                                                ]\n                                            }, definition + (Math.floor(Math.random() * 999999) + 1), true, {\n                                                fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                                lineNumber: 63,\n                                                columnNumber: 25\n                                            }, this);\n                                        }),\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                            className: \"space-x-6\",\n                                            children: [\n                                                meaning.synonyms.length === 0 ? null : /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"label\", {\n                                                    className: \"text-primary\",\n                                                    children: \"Synonyms: \"\n                                                }, void 0, false, {\n                                                    fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                                    lineNumber: 87,\n                                                    columnNumber: 25\n                                                }, this),\n                                                meaning.synonyms.map((synonym)=>/*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"label\", {\n                                                        className: \"text-primary-focus font-bold\",\n                                                        children: synonym\n                                                    }, synonym + (Math.floor(Math.random() * 999999) + 1), false, {\n                                                        fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                                        lineNumber: 90,\n                                                        columnNumber: 25\n                                                    }, this))\n                                            ]\n                                        }, void 0, true, {\n                                            fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                            lineNumber: 85,\n                                            columnNumber: 21\n                                        }, this)\n                                    ]\n                                }, meaning + (Math.floor(Math.random() * 999999) + 1), true, {\n                                    fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                    lineNumber: 57,\n                                    columnNumber: 19\n                                }, this);\n                            })\n                        }, void 0, false, {\n                            fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                            lineNumber: 53,\n                            columnNumber: 13\n                        }, this)\n                    ]\n                }, word + (Math.floor(Math.random() * 999999) + 1), true, {\n                    fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                    lineNumber: 31,\n                    columnNumber: 11\n                }, this);\n            }),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                className: \"mockup-code\",\n                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"code\", {\n                    children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"pre\", {\n                        children: JSON.stringify(dictData, undefined, 2)\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                        lineNumber: 111,\n                        columnNumber: 11\n                    }, this)\n                }, void 0, false, {\n                    fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                    lineNumber: 110,\n                    columnNumber: 9\n                }, this)\n            }, void 0, false, {\n                fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                lineNumber: 109,\n                columnNumber: 7\n            }, this)\n        ]\n    }, void 0, true);\n    const handleSearch = async (e)=>{\n        e.preventDefault();\n        const data = await searchDictApi(searchTerm);\n        setDictData(data);\n    };\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((next_head__WEBPACK_IMPORTED_MODULE_1___default()), {\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"title\", {\n                        children: \"Dictionary\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                        lineNumber: 127,\n                        columnNumber: 9\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"meta\", {\n                        name: \"description\",\n                        content: \"Generated by create next app\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                        lineNumber: 128,\n                        columnNumber: 9\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"meta\", {\n                        name: \"viewport\",\n                        content: \"width=device-width, initial-scale=1\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                        lineNumber: 129,\n                        columnNumber: 9\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"link\", {\n                        rel: \"icon\",\n                        href: \"/favicon.ico\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                        lineNumber: 130,\n                        columnNumber: 9\n                    }, this)\n                ]\n            }, void 0, true, {\n                fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                lineNumber: 126,\n                columnNumber: 7\n            }, this),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"main\", {\n                className: \"relative\",\n                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"form\", {\n                    onSubmit: handleSearch,\n                    className: \"m-6 space-y-4\",\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                            className: \"space-x-4\",\n                            children: [\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"input\", {\n                                    type: \"text\",\n                                    placeholder: \"Type here\",\n                                    className: \"input input-bordered input-primary w-full max-w-xs\",\n                                    onChange: handleChange,\n                                    value: searchTerm\n                                }, void 0, false, {\n                                    fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                    lineNumber: 135,\n                                    columnNumber: 13\n                                }, this),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"button\", {\n                                    className: \"btn btn-success\",\n                                    children: \"Search\"\n                                }, void 0, false, {\n                                    fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                    lineNumber: 142,\n                                    columnNumber: 13\n                                }, this)\n                            ]\n                        }, void 0, true, {\n                            fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                            lineNumber: 134,\n                            columnNumber: 11\n                        }, this),\n                        renderDictionaryData\n                    ]\n                }, void 0, true, {\n                    fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                    lineNumber: 133,\n                    columnNumber: 9\n                }, this)\n            }, void 0, false, {\n                fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                lineNumber: 132,\n                columnNumber: 7\n            }, this)\n        ]\n    }, void 0, true);\n}\nconst searchDictApi = async (searchTerm)=>{\n    const response = await axios__WEBPACK_IMPORTED_MODULE_2__[\"default\"].get(`https://api.dictionaryapi.dev/api/v2/entries/en/${searchTerm}`);\n    return response.data;\n};\nconst getStaticProps = async (ctx)=>{\n    const theme = \"night\";\n    const dictapi_data = [];\n    return {\n        props: {\n            theme,\n            dictapi_data\n        }\n    };\n};\n\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,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Y2VzIjpbIndlYnBhY2s6Ly9kaWN0aW9uYXJ5LWFwcC8uL3NyYy9wYWdlcy9pbmRleC50c3g/MTlhMCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgSGVhZCBmcm9tIFwibmV4dC9oZWFkXCI7XG5pbXBvcnQgSW1hZ2UgZnJvbSBcIm5leHQvaW1hZ2VcIjtcbmltcG9ydCB7IEludGVyIH0gZnJvbSBcIm5leHQvZm9udC9nb29nbGVcIjtcbmltcG9ydCBzdHlsZXMgZnJvbSBcIkAvc3R5bGVzL0hvbWUubW9kdWxlLmNzc1wiO1xuaW1wb3J0IHsgR2V0U3RhdGljUHJvcHMgfSBmcm9tIFwibmV4dFwiO1xuaW1wb3J0IGF4aW9zIGZyb20gXCJheGlvc1wiO1xuaW1wb3J0IHsgQ2hhbmdlRXZlbnQsIHVzZVN0YXRlLCB1c2VFZmZlY3QgfSBmcm9tIFwicmVhY3RcIjtcbmltcG9ydCB7IEhpT3V0bGluZVBsYXkgfSBmcm9tIFwicmVhY3QtaWNvbnMvaGkyXCI7XG5pbXBvcnQgUmVhY3RQbGF5ZXIgZnJvbSBcInJlYWN0LXBsYXllclwiO1xuXG5jb25zdCBpbnRlciA9IEludGVyKHsgc3Vic2V0czogW1wibGF0aW5cIl0gfSk7XG5cbmludGVyZmFjZSBIb21lUHJvcHMge1xuICB0aGVtZTogc3RyaW5nO1xuICBkaWN0YXBpX2RhdGE6IFtdO1xufVxuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBIb21lKHsgdGhlbWUsIGRpY3RhcGlfZGF0YSB9OiBIb21lUHJvcHMpIHtcbiAgY29uc3QgW3NlYXJjaFRlcm0sIHNldFNlYXJjaFRlcm1dID0gdXNlU3RhdGUoXCJyYXBcIik7XG4gIGNvbnN0IFtkaWN0RGF0YSwgc2V0RGljdERhdGFdID0gdXNlU3RhdGUoZGljdGFwaV9kYXRhKTtcbiAgY29uc3QgW2F1ZGlvUGxheWluZywgc2V0QXVkaW9QbGF5aW5nXSA9IHVzZVN0YXRlKGZhbHNlKTtcblxuICBjb25zdCBoYW5kbGVDaGFuZ2UgPSAoZXZlbnQ6IENoYW5nZUV2ZW50PEhUTUxJbnB1dEVsZW1lbnQ+KSA9PiB7XG4gICAgc2V0U2VhcmNoVGVybShldmVudC50YXJnZXQudmFsdWUpO1xuICB9O1xuXG4gIGNvbnN0IHJlbmRlckRpY3Rpb25hcnlEYXRhID0gKFxuICAgIDw+XG4gICAgICB7ZGljdERhdGEubWFwKCh7IHdvcmQsIHBob25ldGljLCBwaG9uZXRpY3MsIG1lYW5pbmdzIH0pID0+IHtcbiAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICA8ZGl2IGtleT17d29yZCArIChNYXRoLmZsb29yKE1hdGgucmFuZG9tKCkgKiA5OTk5OTkpICsgMSl9PlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJncmlkIGdyaWQtZmxvdy1jb2wgZ2FwLTI4IHctZnVsbFwiPlxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImdyaWQgaXRlbXMtZW5kXCI+XG4gICAgICAgICAgICAgICAgPGxhYmVsIGNsYXNzTmFtZT1cInRleHQtOHhsIGZvbnQtYm9sZFwiPnt3b3JkfTwvbGFiZWw+XG4gICAgICAgICAgICAgICAgPGxhYmVsIGNsYXNzTmFtZT1cInRleHQteGwgZm9udC1zZW1pYm9sZCB0ZXh0LXNlY29uZGFyeVwiPlxuICAgICAgICAgICAgICAgICAge3Bob25ldGljfVxuICAgICAgICAgICAgICAgIDwvbGFiZWw+XG4gICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImp1c3RpZnktZW5kIGl0ZW1zLWNlbnRlciB0ZXh0LXN1Y2Nlc3MgZmxleC1ub25lIGZsZXhcIj5cbiAgICAgICAgICAgICAgICA8SGlPdXRsaW5lUGxheVxuICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwiYnRuIGJ0bi1naG9zdCBidG4tY2lyY2xlIGJ0bi1vdXRsaW5lIHctMjAgaC0yMCBwLTQgY3Vyc29yLXBvaW50ZXJcIlxuICAgICAgICAgICAgICAgICAgb25DbGljaz17KCkgPT4gc2V0QXVkaW9QbGF5aW5nKHRydWUpfVxuICAgICAgICAgICAgICAgIC8+XG4gICAgICAgICAgICAgICAgPFJlYWN0UGxheWVyXG4gICAgICAgICAgICAgICAgICB1cmw9e3Bob25ldGljc1swXS5hdWRpb31cbiAgICAgICAgICAgICAgICAgIHBsYXlpbmc9e2F1ZGlvUGxheWluZ31cbiAgICAgICAgICAgICAgICAgIGhlaWdodD17MH1cbiAgICAgICAgICAgICAgICAgIHdpZHRoPXswfVxuICAgICAgICAgICAgICAgICAgb25FbmRlZD17KCkgPT4gc2V0QXVkaW9QbGF5aW5nKGZhbHNlKX1cbiAgICAgICAgICAgICAgICAvPlxuICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgey8qIDxwcmUgaWQ9XCJqc29uXCI+e0pTT04uc3RyaW5naWZ5KG1lYW5pbmdzLCB1bmRlZmluZWQsIDIpfTwvcHJlPiAgICAgICAgICAgICAgICovfVxuICAgICAgICAgICAgICB7bWVhbmluZ3MubWFwKChtZWFuaW5nKSA9PiB7XG4gICAgICAgICAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICAgICAgICAgIDxkaXYga2V5PXttZWFuaW5nICsgKE1hdGguZmxvb3IoTWF0aC5yYW5kb20oKSAqIDk5OTk5OSkgKyAxKX0+XG4gICAgICAgICAgICAgICAgICAgIDxsYWJlbCBjbGFzc05hbWU9XCJ0ZXh0LTJ4bCBmb250LWJvbGRcIj5cbiAgICAgICAgICAgICAgICAgICAgICB7bWVhbmluZy5wYXJ0T2ZTcGVlY2h9XG4gICAgICAgICAgICAgICAgICAgIDwvbGFiZWw+XG4gICAgICAgICAgICAgICAgICAgIHttZWFuaW5nLmRlZmluaXRpb25zLm1hcCgoZGVmaW5pdGlvbikgPT4ge1xuICAgICAgICAgICAgICAgICAgICAgIHJldHVybiAoXG4gICAgICAgICAgICAgICAgICAgICAgICA8ZGl2XG4gICAgICAgICAgICAgICAgICAgICAgICAgIGtleT17XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgZGVmaW5pdGlvbiArXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgKE1hdGguZmxvb3IoTWF0aC5yYW5kb20oKSAqIDk5OTk5OSkgKyAxKVxuICAgICAgICAgICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cImdyaWQgZ3JpZC1mbG93LXJvdyBwbC02XCJcbiAgICAgICAgICAgICAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgPGxhYmVsPioge2RlZmluaXRpb24uZGVmaW5pdGlvbn08L2xhYmVsPlxuICAgICAgICAgICAgICAgICAgICAgICAgICB7ZGVmaW5pdGlvbj8uc3lub255bXMgfHwgKFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxsYWJlbD5TeW5vbnltczoge2RlZmluaXRpb24uc3lub255bXN9PC9sYWJlbD5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgKX1cbiAgICAgICAgICAgICAgICAgICAgICAgICAge2RlZmluaXRpb24/LmFudG9ueW1zIHx8IChcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8bGFiZWw+QW50b255bXM6IHtkZWZpbml0aW9uLmFudG9ueW1zfTwvbGFiZWw+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICl9XG4gICAgICAgICAgICAgICAgICAgICAgICAgIHtkZWZpbml0aW9uPy5leGFtcGxlICYmIChcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8bGFiZWwgY2xhc3NOYW1lPVwiZm9udC1leHRyYWxpZ2h0IGl0YWxpY1wiPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXCJ7ZGVmaW5pdGlvbi5leGFtcGxlfVwiXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9sYWJlbD5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgKX1cbiAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICk7XG4gICAgICAgICAgICAgICAgICAgIH0pfVxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInNwYWNlLXgtNlwiPlxuICAgICAgICAgICAgICAgICAgICAgIHttZWFuaW5nLnN5bm9ueW1zLmxlbmd0aCA9PT0gMCA/IG51bGwgOiAoXG4gICAgICAgICAgICAgICAgICAgICAgICA8bGFiZWwgY2xhc3NOYW1lPVwidGV4dC1wcmltYXJ5XCI+U3lub255bXM6IDwvbGFiZWw+XG4gICAgICAgICAgICAgICAgICAgICAgKX1cbiAgICAgICAgICAgICAgICAgICAgICB7bWVhbmluZy5zeW5vbnltcy5tYXAoKHN5bm9ueW0pID0+IChcbiAgICAgICAgICAgICAgICAgICAgICAgIDxsYWJlbFxuICAgICAgICAgICAgICAgICAgICAgICAgICBrZXk9e1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHN5bm9ueW0gKyAoTWF0aC5mbG9vcihNYXRoLnJhbmRvbSgpICogOTk5OTk5KSArIDEpXG4gICAgICAgICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwidGV4dC1wcmltYXJ5LWZvY3VzIGZvbnQtYm9sZFwiXG4gICAgICAgICAgICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgICAgICAgICAgIHtzeW5vbnltfVxuICAgICAgICAgICAgICAgICAgICAgICAgPC9sYWJlbD5cbiAgICAgICAgICAgICAgICAgICAgICApKX1cbiAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICApO1xuICAgICAgICAgICAgICB9KX1cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICApO1xuICAgICAgfSl9XG5cbiAgICAgIHsvKiBhcGkganNvbiAqL31cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwibW9ja3VwLWNvZGVcIj5cbiAgICAgICAgPGNvZGU+XG4gICAgICAgICAgPHByZT57SlNPTi5zdHJpbmdpZnkoZGljdERhdGEsIHVuZGVmaW5lZCwgMil9PC9wcmU+XG4gICAgICAgIDwvY29kZT5cbiAgICAgIDwvZGl2PlxuICAgIDwvPlxuICApO1xuXG4gIGNvbnN0IGhhbmRsZVNlYXJjaCA9IGFzeW5jIChlOiBDaGFuZ2VFdmVudDxIVE1MRm9ybUVsZW1lbnQ+KSA9PiB7XG4gICAgZS5wcmV2ZW50RGVmYXVsdCgpO1xuICAgIGNvbnN0IGRhdGEgPSBhd2FpdCBzZWFyY2hEaWN0QXBpKHNlYXJjaFRlcm0pO1xuXG4gICAgc2V0RGljdERhdGEoZGF0YSk7XG4gIH07XG5cbiAgcmV0dXJuIChcbiAgICA8PlxuICAgICAgPEhlYWQ+XG4gICAgICAgIDx0aXRsZT5EaWN0aW9uYXJ5PC90aXRsZT5cbiAgICAgICAgPG1ldGEgbmFtZT1cImRlc2NyaXB0aW9uXCIgY29udGVudD1cIkdlbmVyYXRlZCBieSBjcmVhdGUgbmV4dCBhcHBcIiAvPlxuICAgICAgICA8bWV0YSBuYW1lPVwidmlld3BvcnRcIiBjb250ZW50PVwid2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTFcIiAvPlxuICAgICAgICA8bGluayByZWw9XCJpY29uXCIgaHJlZj1cIi9mYXZpY29uLmljb1wiIC8+XG4gICAgICA8L0hlYWQ+XG4gICAgICA8bWFpbiBjbGFzc05hbWU9XCJyZWxhdGl2ZVwiPlxuICAgICAgICA8Zm9ybSBvblN1Ym1pdD17aGFuZGxlU2VhcmNofSBjbGFzc05hbWU9XCJtLTYgc3BhY2UteS00XCI+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJzcGFjZS14LTRcIj5cbiAgICAgICAgICAgIDxpbnB1dFxuICAgICAgICAgICAgICB0eXBlPVwidGV4dFwiXG4gICAgICAgICAgICAgIHBsYWNlaG9sZGVyPVwiVHlwZSBoZXJlXCJcbiAgICAgICAgICAgICAgY2xhc3NOYW1lPVwiaW5wdXQgaW5wdXQtYm9yZGVyZWQgaW5wdXQtcHJpbWFyeSB3LWZ1bGwgbWF4LXcteHNcIlxuICAgICAgICAgICAgICBvbkNoYW5nZT17aGFuZGxlQ2hhbmdlfVxuICAgICAgICAgICAgICB2YWx1ZT17c2VhcmNoVGVybX1cbiAgICAgICAgICAgIC8+XG4gICAgICAgICAgICA8YnV0dG9uIGNsYXNzTmFtZT1cImJ0biBidG4tc3VjY2Vzc1wiPlNlYXJjaDwvYnV0dG9uPlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIHtyZW5kZXJEaWN0aW9uYXJ5RGF0YX1cbiAgICAgICAgPC9mb3JtPlxuICAgICAgPC9tYWluPlxuICAgIDwvPlxuICApO1xufVxuXG5jb25zdCBzZWFyY2hEaWN0QXBpID0gYXN5bmMgKHNlYXJjaFRlcm06IHN0cmluZykgPT4ge1xuICBjb25zdCByZXNwb25zZSA9IGF3YWl0IGF4aW9zLmdldChcbiAgICBgaHR0cHM6Ly9hcGkuZGljdGlvbmFyeWFwaS5kZXYvYXBpL3YyL2VudHJpZXMvZW4vJHtzZWFyY2hUZXJtfWBcbiAgKTtcblxuICByZXR1cm4gcmVzcG9uc2UuZGF0YTtcbn07XG5cbmV4cG9ydCBjb25zdCBnZXRTdGF0aWNQcm9wczogR2V0U3RhdGljUHJvcHMgPSBhc3luYyAoY3R4KSA9PiB7XG4gIGNvbnN0IHRoZW1lID0gXCJuaWdodFwiO1xuICBjb25zdCBkaWN0YXBpX2RhdGEgPSBbXTtcblxuICByZXR1cm4ge1xuICAgIHByb3BzOiB7XG4gICAgICB0aGVtZSxcbiAgICAgIGRpY3RhcGlfZGF0YSxcbiAgICB9LFxuICB9O1xufTtcbiJdLCJuYW1lcyI6WyJpbnRlciIsIkhlYWQiLCJheGlvcyIsInVzZVN0YXRlIiwiSGlPdXRsaW5lUGxheSIsIlJlYWN0UGxheWVyIiwiSG9tZSIsInRoZW1lIiwiZGljdGFwaV9kYXRhIiwic2VhcmNoVGVybSIsInNldFNlYXJjaFRlcm0iLCJkaWN0RGF0YSIsInNldERpY3REYXRhIiwiYXVkaW9QbGF5aW5nIiwic2V0QXVkaW9QbGF5aW5nIiwiaGFuZGxlQ2hhbmdlIiwiZXZlbnQiLCJ0YXJnZXQiLCJ2YWx1ZSIsInJlbmRlckRpY3Rpb25hcnlEYXRhIiwibWFwIiwid29yZCIsInBob25ldGljIiwicGhvbmV0aWNzIiwibWVhbmluZ3MiLCJkaXYiLCJjbGFzc05hbWUiLCJsYWJlbCIsIm9uQ2xpY2siLCJ1cmwiLCJhdWRpbyIsInBsYXlpbmciLCJoZWlnaHQiLCJ3aWR0aCIsIm9uRW5kZWQiLCJtZWFuaW5nIiwicGFydE9mU3BlZWNoIiwiZGVmaW5pdGlvbnMiLCJkZWZpbml0aW9uIiwic3lub255bXMiLCJhbnRvbnltcyIsImV4YW1wbGUiLCJNYXRoIiwiZmxvb3IiLCJyYW5kb20iLCJsZW5ndGgiLCJzeW5vbnltIiwiY29kZSIsInByZSIsIkpTT04iLCJzdHJpbmdpZnkiLCJ1bmRlZmluZWQiLCJoYW5kbGVTZWFyY2giLCJlIiwicHJldmVudERlZmF1bHQiLCJkYXRhIiwic2VhcmNoRGljdEFwaSIsInRpdGxlIiwibWV0YSIsIm5hbWUiLCJjb250ZW50IiwibGluayIsInJlbCIsImhyZWYiLCJtYWluIiwiZm9ybSIsIm9uU3VibWl0IiwiaW5wdXQiLCJ0eXBlIiwicGxhY2Vob2xkZXIiLCJvbkNoYW5nZSIsImJ1dHRvbiIsInJlc3BvbnNlIiwiZ2V0IiwiZ2V0U3RhdGljUHJvcHMiLCJjdHgiLCJwcm9wcyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/pages/index.tsx\n");
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Home),
+/* harmony export */   "getStaticProps": () => (/* binding */ getStaticProps)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(968);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(924);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_icons_hi2__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(774);
+/* harmony import */ var react_icons_hi2__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_icons_hi2__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_player__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(273);
+/* harmony import */ var react_player__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_player__WEBPACK_IMPORTED_MODULE_5__);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([axios__WEBPACK_IMPORTED_MODULE_2__]);
+axios__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+
+
+
+
+
+
+
+function Home({ theme , dictapi_data  }) {
+    const [searchTerm, setSearchTerm] = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)("rap");
+    const [dictData, setDictData] = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)(dictapi_data);
+    const [audioPlaying, setAudioPlaying] = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)(false);
+    const handleChange = (event)=>{
+        setSearchTerm(event.target.value);
+    };
+    const renderDictionaryData = /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+        children: [
+            dictData.map(({ word , phonetic , phonetics , meanings  })=>{
+                return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                    children: [
+                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                            className: "grid grid-flow-col gap-28 w-full",
+                            children: [
+                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                    className: "grid items-end",
+                                    children: [
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("label", {
+                                            className: "text-8xl font-bold",
+                                            children: word
+                                        }),
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("label", {
+                                            className: "text-xl font-semibold text-secondary",
+                                            children: phonetic
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                    className: "justify-end items-center text-success flex-none flex",
+                                    children: [
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_icons_hi2__WEBPACK_IMPORTED_MODULE_4__.HiOutlinePlay, {
+                                            className: "btn btn-ghost btn-circle btn-outline w-20 h-20 p-4 cursor-pointer",
+                                            onClick: ()=>setAudioPlaying(true)
+                                        }),
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((react_player__WEBPACK_IMPORTED_MODULE_5___default()), {
+                                            url: phonetics[0].audio,
+                                            playing: audioPlaying,
+                                            height: 0,
+                                            width: 0,
+                                            onEnded: ()=>setAudioPlaying(false)
+                                        })
+                                    ]
+                                })
+                            ]
+                        }),
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                            children: meanings.map((meaning)=>{
+                                return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                    children: [
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("label", {
+                                            className: "text-2xl font-bold",
+                                            children: meaning.partOfSpeech
+                                        }),
+                                        meaning.definitions.map((definition)=>{
+                                            return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                                className: "grid grid-flow-row pl-6",
+                                                children: [
+                                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("label", {
+                                                        children: [
+                                                            "* ",
+                                                            definition.definition
+                                                        ]
+                                                    }),
+                                                    definition?.synonyms || /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("label", {
+                                                        children: [
+                                                            "Synonyms: ",
+                                                            definition.synonyms
+                                                        ]
+                                                    }),
+                                                    definition?.antonyms || /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("label", {
+                                                        children: [
+                                                            "Antonyms: ",
+                                                            definition.antonyms
+                                                        ]
+                                                    }),
+                                                    definition?.example && /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("label", {
+                                                        className: "font-extralight italic",
+                                                        children: [
+                                                            '"',
+                                                            definition.example,
+                                                            '"'
+                                                        ]
+                                                    })
+                                                ]
+                                            }, Math.floor(Math.random() * 999999) + 1);
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                            className: "space-x-6",
+                                            children: [
+                                                meaning.synonyms.length === 0 ? null : /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("label", {
+                                                    className: "text-primary",
+                                                    children: "Synonyms: "
+                                                }),
+                                                meaning.synonyms.map((synonym)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("label", {
+                                                        className: "text-primary-focus font-bold",
+                                                        children: synonym
+                                                    }, synonym + (Math.floor(Math.random() * 999999) + 1)))
+                                            ]
+                                        })
+                                    ]
+                                }, Math.floor(Math.random() * 999999) + 1);
+                            })
+                        })
+                    ]
+                }, word + (Math.floor(Math.random() * 999999) + 1));
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                className: "mockup-code",
+                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("code", {
+                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("pre", {
+                        children: JSON.stringify(dictData, undefined, 2)
+                    })
+                })
+            })
+        ]
+    });
+    const handleSearch = async (e)=>{
+        e.preventDefault();
+        const data = await searchDictApi(searchTerm);
+        setDictData(data);
+    };
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+        children: [
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_head__WEBPACK_IMPORTED_MODULE_1___default()), {
+                children: [
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("title", {
+                        children: "Dictionary"
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                        name: "description",
+                        content: "Generated by create next app"
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                        name: "viewport",
+                        content: "width=device-width, initial-scale=1"
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("link", {
+                        rel: "icon",
+                        href: "/favicon.ico"
+                    })
+                ]
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("main", {
+                className: "relative",
+                children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("form", {
+                    onSubmit: handleSearch,
+                    className: "m-6 space-y-4",
+                    children: [
+                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                            className: "space-x-4",
+                            children: [
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("input", {
+                                    type: "text",
+                                    placeholder: "Type here",
+                                    className: "input input-bordered input-primary w-full max-w-xs",
+                                    onChange: handleChange,
+                                    value: searchTerm
+                                }),
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
+                                    className: "btn btn-success",
+                                    children: "Search"
+                                })
+                            ]
+                        }),
+                        renderDictionaryData
+                    ]
+                })
+            })
+        ]
+    });
+}
+const searchDictApi = async (searchTerm)=>{
+    const response = await axios__WEBPACK_IMPORTED_MODULE_2__["default"].get(`https://api.dictionaryapi.dev/api/v2/entries/en/${searchTerm}`);
+    return response.data;
+};
+const getStaticProps = async (ctx)=>{
+    const theme = "night";
+    const dictapi_data = [];
+    return {
+        props: {
+            theme,
+            dictapi_data
+        }
+    };
+};
+
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
 
 /***/ }),
 
-/***/ "next/head":
-/*!****************************!*\
-  !*** external "next/head" ***!
-  \****************************/
+/***/ 968:
 /***/ ((module) => {
 
 module.exports = require("next/head");
 
 /***/ }),
 
-/***/ "react":
-/*!************************!*\
-  !*** external "react" ***!
-  \************************/
+/***/ 689:
 /***/ ((module) => {
 
 module.exports = require("react");
 
 /***/ }),
 
-/***/ "react-icons/hi2":
-/*!**********************************!*\
-  !*** external "react-icons/hi2" ***!
-  \**********************************/
+/***/ 774:
 /***/ ((module) => {
 
 module.exports = require("react-icons/hi2");
 
 /***/ }),
 
-/***/ "react-player":
-/*!*******************************!*\
-  !*** external "react-player" ***!
-  \*******************************/
+/***/ 273:
 /***/ ((module) => {
 
 module.exports = require("react-player");
 
 /***/ }),
 
-/***/ "react/jsx-dev-runtime":
-/*!****************************************!*\
-  !*** external "react/jsx-dev-runtime" ***!
-  \****************************************/
+/***/ 997:
 /***/ ((module) => {
 
-module.exports = require("react/jsx-dev-runtime");
+module.exports = require("react/jsx-runtime");
 
 /***/ }),
 
-/***/ "axios":
-/*!************************!*\
-  !*** external "axios" ***!
-  \************************/
+/***/ 924:
 /***/ ((module) => {
 
 module.exports = import("axios");;
@@ -90,7 +275,7 @@ module.exports = import("axios");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("./src/pages/index.tsx"));
+var __webpack_exports__ = (__webpack_exec__(85));
 module.exports = __webpack_exports__;
 
 })();

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { IoSunnyOutline, IoMoonOutline } from "react-icons/io5";
 
 export default function Document() {
-  const [theme, setTheme] = useState("night");
+  const [theme, setTheme] = useState("coffee");
   const NavBar = () => {
     return (
       <div className="justify-end flex p-8">
