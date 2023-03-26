@@ -41,7 +41,7 @@ interface DictProps {
 }
 
 export default function Home({ theme, dictapi_data }: HomeProps) {
-  const [searchTerm, setSearchTerm] = useState("rap");
+  const [searchTerm, setSearchTerm] = useState("");
   const [dictData, setDictData] = useState(dictapi_data);
   const [audioPlaying, setAudioPlaying] = useState(false);
 
@@ -171,7 +171,7 @@ export default function Home({ theme, dictapi_data }: HomeProps) {
           <div className="space-x-4">
             <input
               type="text"
-              placeholder="Type here"
+              placeholder="Type a word here..."
               className="input input-bordered input-primary w-full max-w-xs"
               onChange={handleChange}
               value={searchTerm}
