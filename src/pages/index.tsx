@@ -51,46 +51,53 @@ export default function Home({ theme, dictapi_data }: HomeProps) {
 
   const renderDictionaryData = (
     <>
-      {dictData.map(({ word, phonetic, phonetics, meanings }: DictProps) => {
+      {dictData?.map(({ word, phonetic, phonetics, meanings }: DictProps) => {
         return (
           <div key={word + (Math.floor(Math.random() * 999999) + 1)}>
             <div className="grid grid-flow-col gap-28 w-full">
               <div className="grid items-end">
-                <label className="text-8xl font-bold">{word}</label>
+                <div className="items-center flex gap-4">
+                  <label className="text-8xl font-bold">{word}</label>
+                  {phonetics[0]?.audio && (
+                    <>
+                      <HiOutlinePlay
+                        className="btn btn-ghost btn-circle btn-outline p-2 cursor-pointer"
+                        onClick={() => setAudioPlaying(true)}
+                      />
+                      <ReactPlayer
+                        url={phonetics[0].audio}
+                        playing={audioPlaying}
+                        height={0}
+                        width={0}
+                        onEnded={() => setAudioPlaying(false)}
+                      />
+                    </>
+                  )}
+                </div>
                 <label className="text-xl font-semibold text-secondary">
                   {phonetic}
                 </label>
-              </div>
-              <div className="justify-end items-center text-success flex-none flex">
-                <HiOutlinePlay
-                  className="btn btn-ghost btn-circle btn-outline w-20 h-20 p-4 cursor-pointer"
-                  onClick={() => setAudioPlaying(true)}
-                />
-
-                <ReactPlayer
-                  url={phonetics[0].audio}
-                  playing={audioPlaying}
-                  height={0}
-                  width={0}
-                  onEnded={() => setAudioPlaying(false)}
-                />
               </div>
             </div>
             <div>
               {/* <pre id="json">{JSON.stringify(meanings, undefined, 2)}</pre>               */}
               {meanings.map((meaning) => {
                 return (
-                  <div key={Math.floor(Math.random() * 999999) + 1}>
-                    <label className="text-2xl font-bold">
+                  <div
+                    key={Math.floor(Math.random() * 999999) + 1}
+                    className="grid grid-flow-row gap-y-3"
+                  >
+                    <label className="text-2xl font-bold mt-6">
                       {meaning.partOfSpeech}
                     </label>
+                    <label className="text-primary-focus">Meaning </label>
                     {meaning.definitions.map((definition) => {
                       return (
                         <div
                           key={Math.floor(Math.random() * 999999) + 1}
-                          className="grid grid-flow-row pl-6"
+                          className="grid grid-flow-row pl-6 -gap-y-4"
                         >
-                          <label>* {definition.definition}</label>
+                          <label>• {definition.definition}</label>
                           {definition?.synonyms || (
                             <label>Synonyms: {definition.synonyms}</label>
                           )}
@@ -98,7 +105,7 @@ export default function Home({ theme, dictapi_data }: HomeProps) {
                             <label>Antonyms: {definition.antonyms}</label>
                           )}
                           {definition?.example && (
-                            <label className="font-extralight italic">
+                            <label className="font-extralight italic text-primary-focus pl-2">
                               &quot;{definition.example}&quot;
                             </label>
                           )}
@@ -107,7 +114,7 @@ export default function Home({ theme, dictapi_data }: HomeProps) {
                     })}
                     <div className="space-x-6">
                       {meaning.synonyms.length === 0 ? null : (
-                        <label className="text-primary">Synonyms: </label>
+                        <label className="text-primary-focus">Synonyms</label>
                       )}
                       {meaning.synonyms.map((synonym) => (
                         <label
@@ -126,14 +133,21 @@ export default function Home({ theme, dictapi_data }: HomeProps) {
             </div>
           </div>
         );
-      })}
-
+      }) || (
+        <div className="flex flex-col">
+          <label className="text-5xl font-bold">Word not found</label>
+          <label className="text-lg font-semibold text-secondary">
+            Sorry pal, we couldn't find definitions for the word you were
+            looking for.
+          </label>
+        </div>
+      )}
       {/* api json */}
-      <div className="mockup-code">
+      {/* <div className="mockup-code">
         <code>
           <pre>{JSON.stringify(dictData, undefined, 2)}</pre>
         </code>
-      </div>
+      </div> */}
     </>
   );
 
@@ -172,9 +186,11 @@ export default function Home({ theme, dictapi_data }: HomeProps) {
 }
 
 const searchDictApi = async (searchTerm: string) => {
-  const response = await axios.get(
-    `https://api.dictionaryapi.dev/api/v2/entries/en/${searchTerm}`
-  );
+  const response = await axios
+    .get(`https://api.dictionaryapi.dev/api/v2/entries/en/${searchTerm}`)
+    .catch((e) => {
+      return e;
+    });
 
   return response.data;
 };
