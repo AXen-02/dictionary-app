@@ -74,7 +74,7 @@ export default function Home({ theme, dictapi_data }: HomeProps) {
                     </>
                   )}
                 </div>
-                <label className="text-xl font-semibold text-secondary">
+                <label className="text-xl font-semibold text-secondary mt-4">
                   {phonetic}
                 </label>
               </div>
@@ -168,7 +168,7 @@ export default function Home({ theme, dictapi_data }: HomeProps) {
       </Head>
       <main className="relative">
         <form onSubmit={handleSearch} className="m-6 space-y-4">
-          <div className="space-x-4">
+          <div className="sticky top-0 -mx-6 pr-6 bg-base-100 space-x-4 justify-end flex">
             <input
               type="text"
               placeholder="Type a word here..."

@@ -1,278 +1,82 @@
 "use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
 (() => {
 var exports = {};
-exports.id = 405;
-exports.ids = [405];
+exports.id = "pages/index";
+exports.ids = ["pages/index"];
 exports.modules = {
 
-/***/ 85:
+/***/ "./src/pages/index.tsx":
+/*!*****************************!*\
+  !*** ./src/pages/index.tsx ***!
+  \*****************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Home),
-/* harmony export */   "getStaticProps": () => (/* binding */ getStaticProps)
-/* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(968);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(924);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(689);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react_icons_hi2__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(774);
-/* harmony import */ var react_icons_hi2__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_icons_hi2__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_player__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(273);
-/* harmony import */ var react_player__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_player__WEBPACK_IMPORTED_MODULE_5__);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([axios__WEBPACK_IMPORTED_MODULE_2__]);
-axios__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
-
-
-
-
-
-
-
-function Home({ theme , dictapi_data  }) {
-    const [searchTerm, setSearchTerm] = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)("");
-    const [dictData, setDictData] = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)(dictapi_data);
-    const [audioPlaying, setAudioPlaying] = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)(false);
-    const handleChange = (event)=>{
-        setSearchTerm(event.target.value);
-    };
-    const renderDictionaryData = /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-        children: dictData?.map(({ word , phonetic , phonetics , meanings  })=>{
-            return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                children: [
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                        className: "grid grid-flow-col gap-28 w-full",
-                        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                            className: "grid items-end",
-                            children: [
-                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                    className: "items-center flex gap-4",
-                                    children: [
-                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("label", {
-                                            className: "text-8xl font-bold",
-                                            children: word
-                                        }),
-                                        phonetics[0]?.audio && /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-                                            children: [
-                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_icons_hi2__WEBPACK_IMPORTED_MODULE_4__.HiOutlinePlay, {
-                                                    className: "btn btn-ghost btn-circle btn-outline p-2 cursor-pointer",
-                                                    onClick: ()=>setAudioPlaying(true)
-                                                }),
-                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((react_player__WEBPACK_IMPORTED_MODULE_5___default()), {
-                                                    url: phonetics[0].audio,
-                                                    playing: audioPlaying,
-                                                    height: 0,
-                                                    width: 0,
-                                                    onEnded: ()=>setAudioPlaying(false)
-                                                })
-                                            ]
-                                        })
-                                    ]
-                                }),
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("label", {
-                                    className: "text-xl font-semibold text-secondary",
-                                    children: phonetic
-                                })
-                            ]
-                        })
-                    }),
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                        children: meanings.map((meaning)=>{
-                            return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                className: "grid grid-flow-row gap-y-3",
-                                children: [
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("label", {
-                                        className: "text-2xl font-bold mt-6",
-                                        children: meaning.partOfSpeech
-                                    }),
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("label", {
-                                        className: "text-primary-focus",
-                                        children: "Meaning "
-                                    }),
-                                    meaning.definitions.map((definition)=>{
-                                        return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                            className: "grid grid-flow-row pl-6 -gap-y-4",
-                                            children: [
-                                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("label", {
-                                                    children: [
-                                                        "• ",
-                                                        definition.definition
-                                                    ]
-                                                }),
-                                                definition?.synonyms || /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("label", {
-                                                    children: [
-                                                        "Synonyms: ",
-                                                        definition.synonyms
-                                                    ]
-                                                }),
-                                                definition?.antonyms || /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("label", {
-                                                    children: [
-                                                        "Antonyms: ",
-                                                        definition.antonyms
-                                                    ]
-                                                }),
-                                                definition?.example && /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("label", {
-                                                    className: "font-extralight italic text-primary-focus pl-2",
-                                                    children: [
-                                                        '"',
-                                                        definition.example,
-                                                        '"'
-                                                    ]
-                                                })
-                                            ]
-                                        }, Math.floor(Math.random() * 999999) + 1);
-                                    }),
-                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                        className: "space-x-6",
-                                        children: [
-                                            meaning.synonyms.length === 0 ? null : /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("label", {
-                                                className: "text-primary-focus",
-                                                children: "Synonyms"
-                                            }),
-                                            meaning.synonyms.map((synonym)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("label", {
-                                                    className: "text-primary-focus font-bold",
-                                                    children: synonym
-                                                }, synonym + (Math.floor(Math.random() * 999999) + 1)))
-                                        ]
-                                    })
-                                ]
-                            }, Math.floor(Math.random() * 999999) + 1);
-                        })
-                    })
-                ]
-            }, word + (Math.floor(Math.random() * 999999) + 1));
-        }) || /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-            className: "flex flex-col",
-            children: [
-                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("label", {
-                    className: "text-5xl font-bold",
-                    children: "Word not found"
-                }),
-                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("label", {
-                    className: "text-lg font-semibold text-secondary",
-                    children: "Sorry pal, we couldn't find definitions for the word you were looking for."
-                })
-            ]
-        })
-    });
-    const handleSearch = async (e)=>{
-        e.preventDefault();
-        const data = await searchDictApi(searchTerm);
-        setDictData(data);
-    };
-    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-        children: [
-            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_head__WEBPACK_IMPORTED_MODULE_1___default()), {
-                children: [
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("title", {
-                        children: "Dictionary"
-                    }),
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
-                        name: "description",
-                        content: "Generated by create next app"
-                    }),
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
-                        name: "viewport",
-                        content: "width=device-width, initial-scale=1"
-                    }),
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("link", {
-                        rel: "icon",
-                        href: "/favicon.ico"
-                    })
-                ]
-            }),
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("main", {
-                className: "relative",
-                children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("form", {
-                    onSubmit: handleSearch,
-                    className: "m-6 space-y-4",
-                    children: [
-                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                            className: "space-x-4",
-                            children: [
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("input", {
-                                    type: "text",
-                                    placeholder: "Type a word here...",
-                                    className: "input input-bordered input-primary w-full max-w-xs",
-                                    onChange: handleChange,
-                                    value: searchTerm
-                                }),
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
-                                    className: "btn btn-success",
-                                    children: "Search"
-                                })
-                            ]
-                        }),
-                        renderDictionaryData
-                    ]
-                })
-            })
-        ]
-    });
-}
-const searchDictApi = async (searchTerm)=>{
-    const response = await axios__WEBPACK_IMPORTED_MODULE_2__["default"].get(`https://api.dictionaryapi.dev/api/v2/entries/en/${searchTerm}`).catch((e)=>{
-        return e;
-    });
-    return response.data;
-};
-const getStaticProps = async (ctx)=>{
-    const theme = "night";
-    const dictapi_data = [];
-    return {
-        props: {
-            theme,
-            dictapi_data
-        }
-    };
-};
-
-__webpack_async_result__();
-} catch(e) { __webpack_async_result__(e); } });
+eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Home),\n/* harmony export */   \"getStaticProps\": () => (/* binding */ getStaticProps)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ \"next/head\");\n/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ \"axios\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var react_icons_hi2__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-icons/hi2 */ \"react-icons/hi2\");\n/* harmony import */ var react_icons_hi2__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_icons_hi2__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var react_player__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-player */ \"react-player\");\n/* harmony import */ var react_player__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_player__WEBPACK_IMPORTED_MODULE_5__);\nvar __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([axios__WEBPACK_IMPORTED_MODULE_2__]);\naxios__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];\n\n\n\n\n\n\n\nfunction Home({ theme , dictapi_data  }) {\n    const [searchTerm, setSearchTerm] = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)(\"\");\n    const [dictData, setDictData] = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)(dictapi_data);\n    const [audioPlaying, setAudioPlaying] = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)(false);\n    const handleChange = (event)=>{\n        setSearchTerm(event.target.value);\n    };\n    const renderDictionaryData = /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {\n        children: dictData?.map(({ word , phonetic , phonetics , meanings  })=>{\n            return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"grid grid-flow-col gap-28 w-full\",\n                        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                            className: \"grid items-end\",\n                            children: [\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    className: \"items-center flex gap-4\",\n                                    children: [\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"label\", {\n                                            className: \"text-8xl font-bold\",\n                                            children: word\n                                        }, void 0, false, {\n                                            fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                            lineNumber: 60,\n                                            columnNumber: 19\n                                        }, this),\n                                        phonetics[0]?.audio && /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {\n                                            children: [\n                                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_icons_hi2__WEBPACK_IMPORTED_MODULE_4__.HiOutlinePlay, {\n                                                    className: \"btn btn-ghost btn-circle btn-outline p-2 cursor-pointer\",\n                                                    onClick: ()=>setAudioPlaying(true)\n                                                }, void 0, false, {\n                                                    fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                                    lineNumber: 63,\n                                                    columnNumber: 23\n                                                }, this),\n                                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((react_player__WEBPACK_IMPORTED_MODULE_5___default()), {\n                                                    url: phonetics[0].audio,\n                                                    playing: audioPlaying,\n                                                    height: 0,\n                                                    width: 0,\n                                                    onEnded: ()=>setAudioPlaying(false)\n                                                }, void 0, false, {\n                                                    fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                                    lineNumber: 67,\n                                                    columnNumber: 23\n                                                }, this)\n                                            ]\n                                        }, void 0, true)\n                                    ]\n                                }, void 0, true, {\n                                    fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                    lineNumber: 59,\n                                    columnNumber: 17\n                                }, this),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"label\", {\n                                    className: \"text-xl font-semibold text-secondary mt-4\",\n                                    children: phonetic\n                                }, void 0, false, {\n                                    fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                    lineNumber: 77,\n                                    columnNumber: 17\n                                }, this)\n                            ]\n                        }, void 0, true, {\n                            fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                            lineNumber: 58,\n                            columnNumber: 15\n                        }, this)\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                        lineNumber: 57,\n                        columnNumber: 13\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        children: meanings.map((meaning)=>{\n                            return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                className: \"grid grid-flow-row gap-y-3\",\n                                children: [\n                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"label\", {\n                                        className: \"text-2xl font-bold mt-6\",\n                                        children: meaning.partOfSpeech\n                                    }, void 0, false, {\n                                        fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                        lineNumber: 90,\n                                        columnNumber: 21\n                                    }, this),\n                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"label\", {\n                                        className: \"text-primary-focus\",\n                                        children: \"Meaning \"\n                                    }, void 0, false, {\n                                        fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                        lineNumber: 93,\n                                        columnNumber: 21\n                                    }, this),\n                                    meaning.definitions.map((definition)=>{\n                                        return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                            className: \"grid grid-flow-row pl-6 -gap-y-4\",\n                                            children: [\n                                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"label\", {\n                                                    children: [\n                                                        \"• \",\n                                                        definition.definition\n                                                    ]\n                                                }, void 0, true, {\n                                                    fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                                    lineNumber: 100,\n                                                    columnNumber: 27\n                                                }, this),\n                                                definition?.synonyms || /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"label\", {\n                                                    children: [\n                                                        \"Synonyms: \",\n                                                        definition.synonyms\n                                                    ]\n                                                }, void 0, true, {\n                                                    fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                                    lineNumber: 102,\n                                                    columnNumber: 29\n                                                }, this),\n                                                definition?.antonyms || /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"label\", {\n                                                    children: [\n                                                        \"Antonyms: \",\n                                                        definition.antonyms\n                                                    ]\n                                                }, void 0, true, {\n                                                    fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                                    lineNumber: 105,\n                                                    columnNumber: 29\n                                                }, this),\n                                                definition?.example && /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"label\", {\n                                                    className: \"font-extralight italic text-primary-focus pl-2\",\n                                                    children: [\n                                                        '\"',\n                                                        definition.example,\n                                                        '\"'\n                                                    ]\n                                                }, void 0, true, {\n                                                    fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                                    lineNumber: 108,\n                                                    columnNumber: 29\n                                                }, this)\n                                            ]\n                                        }, Math.floor(Math.random() * 999999) + 1, true, {\n                                            fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                            lineNumber: 96,\n                                            columnNumber: 25\n                                        }, this);\n                                    }),\n                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                        className: \"space-x-6\",\n                                        children: [\n                                            meaning.synonyms.length === 0 ? null : /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"label\", {\n                                                className: \"text-primary-focus\",\n                                                children: \"Synonyms\"\n                                            }, void 0, false, {\n                                                fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                                lineNumber: 117,\n                                                columnNumber: 25\n                                            }, this),\n                                            meaning.synonyms.map((synonym)=>/*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"label\", {\n                                                    className: \"text-primary-focus font-bold\",\n                                                    children: synonym\n                                                }, synonym + (Math.floor(Math.random() * 999999) + 1), false, {\n                                                    fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                                    lineNumber: 120,\n                                                    columnNumber: 25\n                                                }, this))\n                                        ]\n                                    }, void 0, true, {\n                                        fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                        lineNumber: 115,\n                                        columnNumber: 21\n                                    }, this)\n                                ]\n                            }, Math.floor(Math.random() * 999999) + 1, true, {\n                                fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                lineNumber: 86,\n                                columnNumber: 19\n                            }, this);\n                        })\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                        lineNumber: 82,\n                        columnNumber: 13\n                    }, this)\n                ]\n            }, word + (Math.floor(Math.random() * 999999) + 1), true, {\n                fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                lineNumber: 56,\n                columnNumber: 11\n            }, this);\n        }) || /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n            className: \"flex flex-col\",\n            children: [\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"label\", {\n                    className: \"text-5xl font-bold\",\n                    children: \"Word not found\"\n                }, void 0, false, {\n                    fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                    lineNumber: 138,\n                    columnNumber: 11\n                }, this),\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"label\", {\n                    className: \"text-lg font-semibold text-secondary\",\n                    children: \"Sorry pal, we couldn't find definitions for the word you were looking for.\"\n                }, void 0, false, {\n                    fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                    lineNumber: 139,\n                    columnNumber: 11\n                }, this)\n            ]\n        }, void 0, true, {\n            fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n            lineNumber: 137,\n            columnNumber: 9\n        }, this)\n    }, void 0, false);\n    const handleSearch = async (e)=>{\n        e.preventDefault();\n        const data = await searchDictApi(searchTerm);\n        setDictData(data);\n    };\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((next_head__WEBPACK_IMPORTED_MODULE_1___default()), {\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"title\", {\n                        children: \"Dictionary\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                        lineNumber: 164,\n                        columnNumber: 9\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"meta\", {\n                        name: \"description\",\n                        content: \"Generated by create next app\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                        lineNumber: 165,\n                        columnNumber: 9\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"meta\", {\n                        name: \"viewport\",\n                        content: \"width=device-width, initial-scale=1\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                        lineNumber: 166,\n                        columnNumber: 9\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"link\", {\n                        rel: \"icon\",\n                        href: \"/favicon.ico\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                        lineNumber: 167,\n                        columnNumber: 9\n                    }, this)\n                ]\n            }, void 0, true, {\n                fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                lineNumber: 163,\n                columnNumber: 7\n            }, this),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"main\", {\n                className: \"relative\",\n                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"form\", {\n                    onSubmit: handleSearch,\n                    className: \"m-6 space-y-4\",\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                            className: \"sticky top-0 -mx-6 pr-6 bg-base-100 space-x-4 justify-end flex\",\n                            children: [\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"input\", {\n                                    type: \"text\",\n                                    placeholder: \"Type a word here...\",\n                                    className: \"input input-bordered input-primary w-full max-w-xs\",\n                                    onChange: handleChange,\n                                    value: searchTerm\n                                }, void 0, false, {\n                                    fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                    lineNumber: 172,\n                                    columnNumber: 13\n                                }, this),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"button\", {\n                                    className: \"btn btn-success\",\n                                    children: \"Search\"\n                                }, void 0, false, {\n                                    fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                                    lineNumber: 179,\n                                    columnNumber: 13\n                                }, this)\n                            ]\n                        }, void 0, true, {\n                            fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                            lineNumber: 171,\n                            columnNumber: 11\n                        }, this),\n                        renderDictionaryData\n                    ]\n                }, void 0, true, {\n                    fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                    lineNumber: 170,\n                    columnNumber: 9\n                }, this)\n            }, void 0, false, {\n                fileName: \"C:\\\\Users\\\\Instructor Acct\\\\Desktop\\\\React 2023\\\\_NextJS\\\\_Frontend-Mentor\\\\dictionary-app\\\\src\\\\pages\\\\index.tsx\",\n                lineNumber: 169,\n                columnNumber: 7\n            }, this)\n        ]\n    }, void 0, true);\n}\nconst searchDictApi = async (searchTerm)=>{\n    const response = await axios__WEBPACK_IMPORTED_MODULE_2__[\"default\"].get(`https://api.dictionaryapi.dev/api/v2/entries/en/${searchTerm}`).catch((e)=>{\n        return e;\n    });\n    return response.data;\n};\nconst getStaticProps = async (ctx)=>{\n    const theme = \"night\";\n    const dictapi_data = [];\n    return {\n        props: {\n            theme,\n            dictapi_data\n        }\n    };\n};\n\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,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UTtJQUMzRCxNQUFNaEUsUUFBUTtJQUNkLE1BQU1DLGVBQW1CLEVBQUU7SUFFM0IsT0FBTztRQUNMZ0UsT0FBTztZQUNMakU7WUFDQUM7UUFDRjtJQUNGO0FBQ0YsRUFBRSIsInNvdXJjZXMiOlsid2VicGFjazovL2RpY3Rpb25hcnktYXBwLy4vc3JjL3BhZ2VzL2luZGV4LnRzeD8xOWEwIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBIZWFkIGZyb20gXCJuZXh0L2hlYWRcIjtcbmltcG9ydCBJbWFnZSBmcm9tIFwibmV4dC9pbWFnZVwiO1xuaW1wb3J0IHsgSW50ZXIgfSBmcm9tIFwibmV4dC9mb250L2dvb2dsZVwiO1xuaW1wb3J0IHN0eWxlcyBmcm9tIFwiQC9zdHlsZXMvSG9tZS5tb2R1bGUuY3NzXCI7XG5pbXBvcnQgeyBHZXRTdGF0aWNQcm9wcyB9IGZyb20gXCJuZXh0XCI7XG5pbXBvcnQgYXhpb3MgZnJvbSBcImF4aW9zXCI7XG5pbXBvcnQgeyBDaGFuZ2VFdmVudCwgdXNlU3RhdGUsIHVzZUVmZmVjdCB9IGZyb20gXCJyZWFjdFwiO1xuaW1wb3J0IHsgSGlPdXRsaW5lUGxheSB9IGZyb20gXCJyZWFjdC1pY29ucy9oaTJcIjtcbmltcG9ydCBSZWFjdFBsYXllciBmcm9tIFwicmVhY3QtcGxheWVyXCI7XG5cbmNvbnN0IGludGVyID0gSW50ZXIoeyBzdWJzZXRzOiBbXCJsYXRpblwiXSB9KTtcblxuaW50ZXJmYWNlIEhvbWVQcm9wcyB7XG4gIHRoZW1lOiBzdHJpbmc7XG4gIGRpY3RhcGlfZGF0YTogW107XG59XG5cbmludGVyZmFjZSBEaWN0UHJvcHMge1xuICB3b3JkOiBzdHJpbmc7XG4gIHBob25ldGljOiBzdHJpbmc7XG4gIHBob25ldGljczogW1xuICAgIHtcbiAgICAgIGF1ZGlvOiBzdHJpbmc7XG4gICAgfVxuICBdO1xuICBtZWFuaW5nczogW1xuICAgIHtcbiAgICAgIHBhcnRPZlNwZWVjaDogc3RyaW5nO1xuICAgICAgZGVmaW5pdGlvbnM6IFtcbiAgICAgICAge1xuICAgICAgICAgIGRlZmluaXRpb246IHN0cmluZztcbiAgICAgICAgICBzeW5vbnltczogW107XG4gICAgICAgICAgYW50b255bXM6IFtdO1xuICAgICAgICAgIGV4YW1wbGU6IHN0cmluZztcbiAgICAgICAgfVxuICAgICAgXTtcbiAgICAgIHN5bm9ueW1zOiBbXTtcbiAgICAgIGFudG9ueW1zOiBbXTtcbiAgICB9XG4gIF07XG59XG5cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIEhvbWUoeyB0aGVtZSwgZGljdGFwaV9kYXRhIH06IEhvbWVQcm9wcykge1xuICBjb25zdCBbc2VhcmNoVGVybSwgc2V0U2VhcmNoVGVybV0gPSB1c2VTdGF0ZShcIlwiKTtcbiAgY29uc3QgW2RpY3REYXRhLCBzZXREaWN0RGF0YV0gPSB1c2VTdGF0ZShkaWN0YXBpX2RhdGEpO1xuICBjb25zdCBbYXVkaW9QbGF5aW5nLCBzZXRBdWRpb1BsYXlpbmddID0gdXNlU3RhdGUoZmFsc2UpO1xuXG4gIGNvbnN0IGhhbmRsZUNoYW5nZSA9IChldmVudDogQ2hhbmdlRXZlbnQ8SFRNTElucHV0RWxlbWVudD4pID0+IHtcbiAgICBzZXRTZWFyY2hUZXJtKGV2ZW50LnRhcmdldC52YWx1ZSk7XG4gIH07XG5cbiAgY29uc3QgcmVuZGVyRGljdGlvbmFyeURhdGEgPSAoXG4gICAgPD5cbiAgICAgIHtkaWN0RGF0YT8ubWFwKCh7IHdvcmQsIHBob25ldGljLCBwaG9uZXRpY3MsIG1lYW5pbmdzIH06IERpY3RQcm9wcykgPT4ge1xuICAgICAgICByZXR1cm4gKFxuICAgICAgICAgIDxkaXYga2V5PXt3b3JkICsgKE1hdGguZmxvb3IoTWF0aC5yYW5kb20oKSAqIDk5OTk5OSkgKyAxKX0+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImdyaWQgZ3JpZC1mbG93LWNvbCBnYXAtMjggdy1mdWxsXCI+XG4gICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZ3JpZCBpdGVtcy1lbmRcIj5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIml0ZW1zLWNlbnRlciBmbGV4IGdhcC00XCI+XG4gICAgICAgICAgICAgICAgICA8bGFiZWwgY2xhc3NOYW1lPVwidGV4dC04eGwgZm9udC1ib2xkXCI+e3dvcmR9PC9sYWJlbD5cbiAgICAgICAgICAgICAgICAgIHtwaG9uZXRpY3NbMF0/LmF1ZGlvICYmIChcbiAgICAgICAgICAgICAgICAgICAgPD5cbiAgICAgICAgICAgICAgICAgICAgICA8SGlPdXRsaW5lUGxheVxuICAgICAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwiYnRuIGJ0bi1naG9zdCBidG4tY2lyY2xlIGJ0bi1vdXRsaW5lIHAtMiBjdXJzb3ItcG9pbnRlclwiXG4gICAgICAgICAgICAgICAgICAgICAgICBvbkNsaWNrPXsoKSA9PiBzZXRBdWRpb1BsYXlpbmcodHJ1ZSl9XG4gICAgICAgICAgICAgICAgICAgICAgLz5cbiAgICAgICAgICAgICAgICAgICAgICA8UmVhY3RQbGF5ZXJcbiAgICAgICAgICAgICAgICAgICAgICAgIHVybD17cGhvbmV0aWNzWzBdLmF1ZGlvfVxuICAgICAgICAgICAgICAgICAgICAgICAgcGxheWluZz17YXVkaW9QbGF5aW5nfVxuICAgICAgICAgICAgICAgICAgICAgICAgaGVpZ2h0PXswfVxuICAgICAgICAgICAgICAgICAgICAgICAgd2lkdGg9ezB9XG4gICAgICAgICAgICAgICAgICAgICAgICBvbkVuZGVkPXsoKSA9PiBzZXRBdWRpb1BsYXlpbmcoZmFsc2UpfVxuICAgICAgICAgICAgICAgICAgICAgIC8+XG4gICAgICAgICAgICAgICAgICAgIDwvPlxuICAgICAgICAgICAgICAgICAgKX1cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8bGFiZWwgY2xhc3NOYW1lPVwidGV4dC14bCBmb250LXNlbWlib2xkIHRleHQtc2Vjb25kYXJ5IG10LTRcIj5cbiAgICAgICAgICAgICAgICAgIHtwaG9uZXRpY31cbiAgICAgICAgICAgICAgICA8L2xhYmVsPlxuICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgey8qIDxwcmUgaWQ9XCJqc29uXCI+e0pTT04uc3RyaW5naWZ5KG1lYW5pbmdzLCB1bmRlZmluZWQsIDIpfTwvcHJlPiAgICAgICAgICAgICAgICovfVxuICAgICAgICAgICAgICB7bWVhbmluZ3MubWFwKChtZWFuaW5nKSA9PiB7XG4gICAgICAgICAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICAgICAgICAgIDxkaXZcbiAgICAgICAgICAgICAgICAgICAga2V5PXtNYXRoLmZsb29yKE1hdGgucmFuZG9tKCkgKiA5OTk5OTkpICsgMX1cbiAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwiZ3JpZCBncmlkLWZsb3ctcm93IGdhcC15LTNcIlxuICAgICAgICAgICAgICAgICAgPlxuICAgICAgICAgICAgICAgICAgICA8bGFiZWwgY2xhc3NOYW1lPVwidGV4dC0yeGwgZm9udC1ib2xkIG10LTZcIj5cbiAgICAgICAgICAgICAgICAgICAgICB7bWVhbmluZy5wYXJ0T2ZTcGVlY2h9XG4gICAgICAgICAgICAgICAgICAgIDwvbGFiZWw+XG4gICAgICAgICAgICAgICAgICAgIDxsYWJlbCBjbGFzc05hbWU9XCJ0ZXh0LXByaW1hcnktZm9jdXNcIj5NZWFuaW5nIDwvbGFiZWw+XG4gICAgICAgICAgICAgICAgICAgIHttZWFuaW5nLmRlZmluaXRpb25zLm1hcCgoZGVmaW5pdGlvbikgPT4ge1xuICAgICAgICAgICAgICAgICAgICAgIHJldHVybiAoXG4gICAgICAgICAgICAgICAgICAgICAgICA8ZGl2XG4gICAgICAgICAgICAgICAgICAgICAgICAgIGtleT17TWF0aC5mbG9vcihNYXRoLnJhbmRvbSgpICogOTk5OTk5KSArIDF9XG4gICAgICAgICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cImdyaWQgZ3JpZC1mbG93LXJvdyBwbC02IC1nYXAteS00XCJcbiAgICAgICAgICAgICAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgPGxhYmVsPuKAoiB7ZGVmaW5pdGlvbi5kZWZpbml0aW9ufTwvbGFiZWw+XG4gICAgICAgICAgICAgICAgICAgICAgICAgIHtkZWZpbml0aW9uPy5zeW5vbnltcyB8fCAoXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGxhYmVsPlN5bm9ueW1zOiB7ZGVmaW5pdGlvbi5zeW5vbnltc308L2xhYmVsPlxuICAgICAgICAgICAgICAgICAgICAgICAgICApfVxuICAgICAgICAgICAgICAgICAgICAgICAgICB7ZGVmaW5pdGlvbj8uYW50b255bXMgfHwgKFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxsYWJlbD5BbnRvbnltczoge2RlZmluaXRpb24uYW50b255bXN9PC9sYWJlbD5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgKX1cbiAgICAgICAgICAgICAgICAgICAgICAgICAge2RlZmluaXRpb24/LmV4YW1wbGUgJiYgKFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxsYWJlbCBjbGFzc05hbWU9XCJmb250LWV4dHJhbGlnaHQgaXRhbGljIHRleHQtcHJpbWFyeS1mb2N1cyBwbC0yXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAmcXVvdDt7ZGVmaW5pdGlvbi5leGFtcGxlfSZxdW90O1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvbGFiZWw+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICl9XG4gICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgICApO1xuICAgICAgICAgICAgICAgICAgICB9KX1cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJzcGFjZS14LTZcIj5cbiAgICAgICAgICAgICAgICAgICAgICB7bWVhbmluZy5zeW5vbnltcy5sZW5ndGggPT09IDAgPyBudWxsIDogKFxuICAgICAgICAgICAgICAgICAgICAgICAgPGxhYmVsIGNsYXNzTmFtZT1cInRleHQtcHJpbWFyeS1mb2N1c1wiPlN5bm9ueW1zPC9sYWJlbD5cbiAgICAgICAgICAgICAgICAgICAgICApfVxuICAgICAgICAgICAgICAgICAgICAgIHttZWFuaW5nLnN5bm9ueW1zLm1hcCgoc3lub255bSkgPT4gKFxuICAgICAgICAgICAgICAgICAgICAgICAgPGxhYmVsXG4gICAgICAgICAgICAgICAgICAgICAgICAgIGtleT17XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgc3lub255bSArIChNYXRoLmZsb29yKE1hdGgucmFuZG9tKCkgKiA5OTk5OTkpICsgMSlcbiAgICAgICAgICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgICAgICAgICAgICBjbGFzc05hbWU9XCJ0ZXh0LXByaW1hcnktZm9jdXMgZm9udC1ib2xkXCJcbiAgICAgICAgICAgICAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgICAgICAgICAgICAge3N5bm9ueW19XG4gICAgICAgICAgICAgICAgICAgICAgICA8L2xhYmVsPlxuICAgICAgICAgICAgICAgICAgICAgICkpfVxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICk7XG4gICAgICAgICAgICAgIH0pfVxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgICk7XG4gICAgICB9KSB8fCAoXG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBmbGV4LWNvbFwiPlxuICAgICAgICAgIDxsYWJlbCBjbGFzc05hbWU9XCJ0ZXh0LTV4bCBmb250LWJvbGRcIj5Xb3JkIG5vdCBmb3VuZDwvbGFiZWw+XG4gICAgICAgICAgPGxhYmVsIGNsYXNzTmFtZT1cInRleHQtbGcgZm9udC1zZW1pYm9sZCB0ZXh0LXNlY29uZGFyeVwiPlxuICAgICAgICAgICAgU29ycnkgcGFsLCB3ZSBjb3VsZG4mYXBvczt0IGZpbmQgZGVmaW5pdGlvbnMgZm9yIHRoZSB3b3JkIHlvdSB3ZXJlXG4gICAgICAgICAgICBsb29raW5nIGZvci5cbiAgICAgICAgICA8L2xhYmVsPlxuICAgICAgICA8L2Rpdj5cbiAgICAgICl9XG4gICAgICB7LyogYXBpIGpzb24gKi99XG4gICAgICB7LyogPGRpdiBjbGFzc05hbWU9XCJtb2NrdXAtY29kZVwiPlxuICAgICAgICA8Y29kZT5cbiAgICAgICAgICA8cHJlPntKU09OLnN0cmluZ2lmeShkaWN0RGF0YSwgdW5kZWZpbmVkLCAyKX08L3ByZT5cbiAgICAgICAgPC9jb2RlPlxuICAgICAgPC9kaXY+ICovfVxuICAgIDwvPlxuICApO1xuXG4gIGNvbnN0IGhhbmRsZVNlYXJjaCA9IGFzeW5jIChlOiBDaGFuZ2VFdmVudDxIVE1MRm9ybUVsZW1lbnQ+KSA9PiB7XG4gICAgZS5wcmV2ZW50RGVmYXVsdCgpO1xuICAgIGNvbnN0IGRhdGEgPSBhd2FpdCBzZWFyY2hEaWN0QXBpKHNlYXJjaFRlcm0pO1xuXG4gICAgc2V0RGljdERhdGEoZGF0YSk7XG4gIH07XG5cbiAgcmV0dXJuIChcbiAgICA8PlxuICAgICAgPEhlYWQ+XG4gICAgICAgIDx0aXRsZT5EaWN0aW9uYXJ5PC90aXRsZT5cbiAgICAgICAgPG1ldGEgbmFtZT1cImRlc2NyaXB0aW9uXCIgY29udGVudD1cIkdlbmVyYXRlZCBieSBjcmVhdGUgbmV4dCBhcHBcIiAvPlxuICAgICAgICA8bWV0YSBuYW1lPVwidmlld3BvcnRcIiBjb250ZW50PVwid2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTFcIiAvPlxuICAgICAgICA8bGluayByZWw9XCJpY29uXCIgaHJlZj1cIi9mYXZpY29uLmljb1wiIC8+XG4gICAgICA8L0hlYWQ+XG4gICAgICA8bWFpbiBjbGFzc05hbWU9XCJyZWxhdGl2ZVwiPlxuICAgICAgICA8Zm9ybSBvblN1Ym1pdD17aGFuZGxlU2VhcmNofSBjbGFzc05hbWU9XCJtLTYgc3BhY2UteS00XCI+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJzdGlja3kgdG9wLTAgLW14LTYgcHItNiBiZy1iYXNlLTEwMCBzcGFjZS14LTQganVzdGlmeS1lbmQgZmxleFwiPlxuICAgICAgICAgICAgPGlucHV0XG4gICAgICAgICAgICAgIHR5cGU9XCJ0ZXh0XCJcbiAgICAgICAgICAgICAgcGxhY2Vob2xkZXI9XCJUeXBlIGEgd29yZCBoZXJlLi4uXCJcbiAgICAgICAgICAgICAgY2xhc3NOYW1lPVwiaW5wdXQgaW5wdXQtYm9yZGVyZWQgaW5wdXQtcHJpbWFyeSB3LWZ1bGwgbWF4LXcteHNcIlxuICAgICAgICAgICAgICBvbkNoYW5nZT17aGFuZGxlQ2hhbmdlfVxuICAgICAgICAgICAgICB2YWx1ZT17c2VhcmNoVGVybX1cbiAgICAgICAgICAgIC8+XG4gICAgICAgICAgICA8YnV0dG9uIGNsYXNzTmFtZT1cImJ0biBidG4tc3VjY2Vzc1wiPlNlYXJjaDwvYnV0dG9uPlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIHtyZW5kZXJEaWN0aW9uYXJ5RGF0YX1cbiAgICAgICAgPC9mb3JtPlxuICAgICAgPC9tYWluPlxuICAgIDwvPlxuICApO1xufVxuXG5jb25zdCBzZWFyY2hEaWN0QXBpID0gYXN5bmMgKHNlYXJjaFRlcm06IHN0cmluZykgPT4ge1xuICBjb25zdCByZXNwb25zZSA9IGF3YWl0IGF4aW9zXG4gICAgLmdldChgaHR0cHM6Ly9hcGkuZGljdGlvbmFyeWFwaS5kZXYvYXBpL3YyL2VudHJpZXMvZW4vJHtzZWFyY2hUZXJtfWApXG4gICAgLmNhdGNoKChlKSA9PiB7XG4gICAgICByZXR1cm4gZTtcbiAgICB9KTtcblxuICByZXR1cm4gcmVzcG9uc2UuZGF0YTtcbn07XG5cbmV4cG9ydCBjb25zdCBnZXRTdGF0aWNQcm9wczogR2V0U3RhdGljUHJvcHMgPSBhc3luYyAoY3R4KSA9PiB7XG4gIGNvbnN0IHRoZW1lID0gXCJuaWdodFwiO1xuICBjb25zdCBkaWN0YXBpX2RhdGE6IFtdID0gW107XG5cbiAgcmV0dXJuIHtcbiAgICBwcm9wczoge1xuICAgICAgdGhlbWUsXG4gICAgICBkaWN0YXBpX2RhdGEsXG4gICAgfSxcbiAgfTtcbn07XG4iXSwibmFtZXMiOlsiaW50ZXIiLCJIZWFkIiwiYXhpb3MiLCJ1c2VTdGF0ZSIsIkhpT3V0bGluZVBsYXkiLCJSZWFjdFBsYXllciIsIkhvbWUiLCJ0aGVtZSIsImRpY3RhcGlfZGF0YSIsInNlYXJjaFRlcm0iLCJzZXRTZWFyY2hUZXJtIiwiZGljdERhdGEiLCJzZXREaWN0RGF0YSIsImF1ZGlvUGxheWluZyIsInNldEF1ZGlvUGxheWluZyIsImhhbmRsZUNoYW5nZSIsImV2ZW50IiwidGFyZ2V0IiwidmFsdWUiLCJyZW5kZXJEaWN0aW9uYXJ5RGF0YSIsIm1hcCIsIndvcmQiLCJwaG9uZXRpYyIsInBob25ldGljcyIsIm1lYW5pbmdzIiwiZGl2IiwiY2xhc3NOYW1lIiwibGFiZWwiLCJhdWRpbyIsIm9uQ2xpY2siLCJ1cmwiLCJwbGF5aW5nIiwiaGVpZ2h0Iiwid2lkdGgiLCJvbkVuZGVkIiwibWVhbmluZyIsInBhcnRPZlNwZWVjaCIsImRlZmluaXRpb25zIiwiZGVmaW5pdGlvbiIsInN5bm9ueW1zIiwiYW50b255bXMiLCJleGFtcGxlIiwiTWF0aCIsImZsb29yIiwicmFuZG9tIiwibGVuZ3RoIiwic3lub255bSIsImhhbmRsZVNlYXJjaCIsImUiLCJwcmV2ZW50RGVmYXVsdCIsImRhdGEiLCJzZWFyY2hEaWN0QXBpIiwidGl0bGUiLCJtZXRhIiwibmFtZSIsImNvbnRlbnQiLCJsaW5rIiwicmVsIiwiaHJlZiIsIm1haW4iLCJmb3JtIiwib25TdWJtaXQiLCJpbnB1dCIsInR5cGUiLCJwbGFjZWhvbGRlciIsIm9uQ2hhbmdlIiwiYnV0dG9uIiwicmVzcG9uc2UiLCJnZXQiLCJjYXRjaCIsImdldFN0YXRpY1Byb3BzIiwiY3R4IiwicHJvcHMiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/pages/index.tsx\n");
 
 /***/ }),
 
-/***/ 968:
+/***/ "next/head":
+/*!****************************!*\
+  !*** external "next/head" ***!
+  \****************************/
 /***/ ((module) => {
 
 module.exports = require("next/head");
 
 /***/ }),
 
-/***/ 689:
+/***/ "react":
+/*!************************!*\
+  !*** external "react" ***!
+  \************************/
 /***/ ((module) => {
 
 module.exports = require("react");
 
 /***/ }),
 
-/***/ 774:
+/***/ "react-icons/hi2":
+/*!**********************************!*\
+  !*** external "react-icons/hi2" ***!
+  \**********************************/
 /***/ ((module) => {
 
 module.exports = require("react-icons/hi2");
 
 /***/ }),
 
-/***/ 273:
+/***/ "react-player":
+/*!*******************************!*\
+  !*** external "react-player" ***!
+  \*******************************/
 /***/ ((module) => {
 
 module.exports = require("react-player");
 
 /***/ }),
 
-/***/ 997:
+/***/ "react/jsx-dev-runtime":
+/*!****************************************!*\
+  !*** external "react/jsx-dev-runtime" ***!
+  \****************************************/
 /***/ ((module) => {
 
-module.exports = require("react/jsx-runtime");
+module.exports = require("react/jsx-dev-runtime");
 
 /***/ }),
 
-/***/ 924:
+/***/ "axios":
+/*!************************!*\
+  !*** external "axios" ***!
+  \************************/
 /***/ ((module) => {
 
 module.exports = import("axios");;
@@ -286,7 +90,7 @@ module.exports = import("axios");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(85));
+var __webpack_exports__ = (__webpack_exec__("./src/pages/index.tsx"));
 module.exports = __webpack_exports__;
 
 })();
