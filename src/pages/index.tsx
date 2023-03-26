@@ -137,7 +137,7 @@ export default function Home({ theme, dictapi_data }: HomeProps) {
         <div className="flex flex-col">
           <label className="text-5xl font-bold">Word not found</label>
           <label className="text-lg font-semibold text-secondary">
-            Sorry pal, we couldn't find definitions for the word you were
+            Sorry pal, we couldn&apos;t find definitions for the word you were
             looking for.
           </label>
         </div>
