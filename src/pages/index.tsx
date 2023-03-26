@@ -167,8 +167,8 @@ export default function Home({ theme, dictapi_data }: HomeProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="relative">
-        <form onSubmit={handleSearch} className="m-6 space-y-4">
-          <div className="sticky top-0 -mx-6 pr-6 bg-base-100 space-x-4 justify-end flex">
+        <form onSubmit={handleSearch} className="mx-6 space-y-4">
+          <div className="sticky top-0 -mx-6 py-3 pr-6 bg-base-200 space-x-4 justify-end flex">
             <input
               type="text"
               placeholder="Type a word here..."
